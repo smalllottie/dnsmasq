@@ -37,3 +37,4 @@ if [ $? -eq 0 ]; then
 else
     echo "dnsmasq安装失败, 请检查仓库状况"
 fi
+wget https://steamsv.wiki/unlock.sh && chmod +x unlock.sh && ./unlock.sh DNS
