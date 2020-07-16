@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if grep -Eqi "CentOS" /etc/issue || grep -Eq "CentOS" /etc/*-release; then
-    yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    yum install -y https://raw.githubusercontent.com/smalllottie/dnsmasq/master/epel-release-latest-7.noarch.rpm
     yum install bind-utils
     yum install -y dnsmasq
 elif grep -Eqi "Debian" /etc/issue || grep -Eq "Debian" /etc/*-release; then
@@ -37,4 +37,4 @@ if [ $? -eq 0 ]; then
 else
     echo "dnsmasq安装失败, 请检查仓库状况"
 fi
-wget https://steamsv.wiki/unlock.sh && chmod +x unlock.sh && ./unlock.sh DNS
+
